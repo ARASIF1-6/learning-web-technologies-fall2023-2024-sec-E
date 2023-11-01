@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     require_once('db.php');
     function login($userid, $password){
         $con = getConnection();
@@ -42,9 +42,9 @@
         return $users;
     }
 
-    function viewprofile($username){
+    function viewprofile($userid){
         $con = getConnection();
-        $sql = "select * from user where Id = '{$username}'";
+        $sql = "select * from registration where Id = '{$userid}'";
         $result = mysqli_query($con, $sql);
         $user = mysqli_fetch_assoc($result);
 
