@@ -2,6 +2,7 @@
    require_once('../controller/sessionCheck.php');
    require_once('../model/userModel.php');
    $users = getAllUser();
+   $user = viewprofile($_SESSION['user']);
 ?>
 
 
@@ -16,20 +17,15 @@
 		    <tr>
 			  <td><?=$users[$i]['Id']?></td><td><?=$users[$i]['Name']?></td><td><?=$users[$i]['UserType']?></td>
 		    </tr>
-		    <tr>
-			 <td><?=$users[$i]['Id']?></td><td><?=$users[$i]['Name']?></td><td><?=$users[$i]['UserType']?></td>
-		    </tr>
-			<tr>
-			 <td><?=$users[$i]['Id']?></td><td><?=$users[$i]['Name']?></td><td><?=$users[$i]['UserType']?></td>
-		    </tr>
-			<tr>
-			 <td><?=$users[$i]['Id']?></td><td><?=$users[$i]['Name']?></td><td><?=$users[$i]['UserType']?></td>
-		    </tr>
+		<?php } ?> 
 		    <tr>
 			    <td colspan="3" align="right">
-				   <a href="home.html">Go Home</a>
+				    <?php if($user['UserType'] == "Admin"){ ?>
+				      <a href="admin_home.php">Go Home</a>
+					<?php }else{ ?> 
+						<a href="user_home.php">Go Home</a></td></tr> 
+					<?php }?> 
 			    </td>
 		    </tr>
-		<?php } ?> 
 	</table>			
 </center>
