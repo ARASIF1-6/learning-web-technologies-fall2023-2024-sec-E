@@ -1,7 +1,7 @@
 <?php
 
     $dbhost = "localhost";
-    $dbname = "hotel_management_system";
+    $dbname = "project_feature";
     $dbuser = "root";
     $dbpass = "";
 
