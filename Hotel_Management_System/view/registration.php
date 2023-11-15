@@ -2,7 +2,7 @@
 
 <head>
     <title> Registration </title>
-    <script src="guestRegistrationCheck.js"></script>
+    <script src="form_validation_with_JS/guestRegistrationCheck.js"></script>
 </head>
 
 <body>
