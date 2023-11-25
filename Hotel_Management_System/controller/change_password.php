@@ -4,11 +4,9 @@
     session_start();
     $password = getpassword($_SESSION['user']);
 
-    if(isset($_REQUEST['submit'])){
-    $currentpassword = $_REQUEST['currentpassword'];
-    $newpassword = $_REQUEST['newpassword'];
-    $retypenewpassword = $_REQUEST['retypenewpassword'];
-                      
+    $currentpassword = $_REQUEST['cpassword'];
+    $newpassword = $_REQUEST['npassword'];
+    $retypenewpassword = $_REQUEST['rnpassword'];
 
     if($currentpassword == "" || $newpassword == "" || $retypenewpassword == ""){
         echo "null value";
@@ -24,7 +22,6 @@
         if($newpassword == $retypenewpassword){
             updatepassword($_SESSION['user'], $newpassword);
             echo "Password Changed";
-            header('location: ../view/setting.php');
         }
         else{
            echo "Password not Changed";
@@ -32,8 +29,6 @@
     }
     else{
         echo "Invalid password";
-    }
-
     }
 
 ?>

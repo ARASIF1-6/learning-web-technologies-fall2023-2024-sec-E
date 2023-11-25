@@ -44,8 +44,10 @@
             if(empty($email)){
                echo "Please enter your email address";
             }
-            else{
+            else if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                $flag = 3;
+            }else{
+               echo "email address is not valid.";
             }
         }
 
@@ -156,7 +158,7 @@
                 $user = [$userid, $name, $email, $number, $gender, $username, $password];
                 addguest($user);
                 addguestuser($user);
-                header('location: ../view/guests_profile_management.php');
+                header('location: ../view/login.php');
             }
         }
     }

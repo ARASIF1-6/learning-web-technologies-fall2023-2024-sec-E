@@ -9,6 +9,7 @@
 
 <head>
     <title> Guest Profile </title>
+    <script src="../asset/JS/guestRegistrationCheck.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                 <?php include('admin_menu.php'); ?>
             </td>
             <td width = 85%>
-                <form method="post" action="../controller/guestRegistrationCheck.php" enctype="">
+                <form method="" action="" enctype="" onsubmit="return validGuestRegistration()" >
                     <fieldset align = "center">
                         <legend> Add Guest </legend>
                         <input type="text" name="userid" value="<?=$userid?>" placeholder = "Enter User ID" readonly />

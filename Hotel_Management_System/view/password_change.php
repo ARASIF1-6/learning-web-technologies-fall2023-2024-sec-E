@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
     <title>Password Change</title>
+    <script src="../asset/Js/changepassword.js"></script>
 </head>
 
 <body>
@@ -18,16 +19,18 @@
                 <?php include('admin_menu.php'); ?>
             </td>
             <td width = 85%>
-                <form method="post" action="../controller/change_password.php" enctype="">
+                <form method="" action="" enctype="">
                     <fieldset>
                         <legend>PASSWORD CHANGE</legend>
-                        Current Password: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="password" name="currentpassword" value="" /> <br> <br>
-                        New Password: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="password" name="newpassword" value="" /> <br> <br>
-                        Retype New Password: <input type="password" name="retypenewpassword" value="" /> <br> <br>
+                        Current Password: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="password" id="currentpassword" name="currentpassword" value="" /> <br> <br>
+                        New Password: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="password" id="newpassword" name="newpassword" value="" /> <br> <br>
+                        Retype New Password: <input type="password" id="retypenewpassword" name="retypenewpassword" value="" /> <br> <br>
                         <hr>
-                        <input type="submit" name="submit" value="Submit" />
+                        <input type="button" name="submit" value="Submit" onclick="changePassword()" />
                     </fieldset>
                 </form>
+
+                <h5 id="h5"> </h5>
             </td>
         </tr>
         <tr>
